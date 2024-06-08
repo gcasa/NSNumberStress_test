@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149C39202C144F4700C9A99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C391F2C144F4700C9A99E /* main.m */; };
+		149C39202C144F4700C9A99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C391F2C144F4700C9A99E /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
