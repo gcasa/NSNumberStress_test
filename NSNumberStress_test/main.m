@@ -14,7 +14,7 @@ void stressTestNSNumber(void)
     NSNumber *number = [[NSNumber alloc] initWithInt:42];
 
     // Perform retain and release in a loop
-    while (TRUE)
+    while (YES)
     {
         for (int i = 0; i < 1000; i++) {
             [number retain];
