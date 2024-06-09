@@ -8,17 +8,32 @@
 // File: main.m
 #import <Foundation/Foundation.h>
 
+static unsigned long seed;
+
+void initRandomSeed(long firstSeed)
+{
+    seed = firstSeed;
+}
+
+float nextRandomFloat(void)
+{
+    return (((seed= 1664525*seed + 1013904223)>>16) / (float)0x10000);
+}
+
 void stressTestNSNumber(void)
 {
-    // Create an NSNumber object
-    NSNumber *number = [[NSNumber alloc] initWithInt:42];
+    initRandomSeed(19);
 
+    puts("\n");
+    
     // Perform retain and release in a loop
     while (TRUE)
     {
-        for (int i = 0; i < 1000; i++) {
-            [number retain];
-            [number release];
+        @autoreleasepool 
+        {
+            float n = nextRandomFloat();
+            NSNumber *num = [NSNumber numberWithFloat: n];
+            printf("Float = %f\r", [num floatValue]);
         }
     }
 }
