@@ -27,7 +27,7 @@ void stressTestNSNumber(void)
     puts("\n");
     
     // Perform retain and release in a loop
-    while (TRUE)
+    while (YES)
     {
         @autoreleasepool 
         {
